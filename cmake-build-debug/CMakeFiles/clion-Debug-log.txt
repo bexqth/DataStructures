@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -S "/Users/terka/Documents/Data structures/AUS-CMake" -B "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug"
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug
