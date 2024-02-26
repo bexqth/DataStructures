@@ -73,43 +73,43 @@ tests/CMakeFiles/tests.dir/_details/console_output.cpp.o: tests/CMakeFiles/tests
 tests/CMakeFiles/tests.dir/_details/console_output.cpp.o: /Users/terka/Documents/Data\ structures/AUS-CMake/tests/_details/console_output.cpp
 tests/CMakeFiles/tests.dir/_details/console_output.cpp.o: tests/CMakeFiles/tests.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/tests.dir/_details/console_output.cpp.o"
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/tests.dir/_details/console_output.cpp.o -MF CMakeFiles/tests.dir/_details/console_output.cpp.o.d -o CMakeFiles/tests.dir/_details/console_output.cpp.o -c "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/console_output.cpp"
+	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /opt/homebrew/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/tests.dir/_details/console_output.cpp.o -MF CMakeFiles/tests.dir/_details/console_output.cpp.o.d -o CMakeFiles/tests.dir/_details/console_output.cpp.o -c "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/console_output.cpp"
 
 tests/CMakeFiles/tests.dir/_details/console_output.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tests.dir/_details/console_output.cpp.i"
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/console_output.cpp" > CMakeFiles/tests.dir/_details/console_output.cpp.i
+	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /opt/homebrew/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/console_output.cpp" > CMakeFiles/tests.dir/_details/console_output.cpp.i
 
 tests/CMakeFiles/tests.dir/_details/console_output.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tests.dir/_details/console_output.cpp.s"
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/console_output.cpp" -o CMakeFiles/tests.dir/_details/console_output.cpp.s
+	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /opt/homebrew/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/console_output.cpp" -o CMakeFiles/tests.dir/_details/console_output.cpp.s
 
 tests/CMakeFiles/tests.dir/_details/console.cpp.o: tests/CMakeFiles/tests.dir/flags.make
 tests/CMakeFiles/tests.dir/_details/console.cpp.o: /Users/terka/Documents/Data\ structures/AUS-CMake/tests/_details/console.cpp
 tests/CMakeFiles/tests.dir/_details/console.cpp.o: tests/CMakeFiles/tests.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/CMakeFiles/tests.dir/_details/console.cpp.o"
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/tests.dir/_details/console.cpp.o -MF CMakeFiles/tests.dir/_details/console.cpp.o.d -o CMakeFiles/tests.dir/_details/console.cpp.o -c "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/console.cpp"
+	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /opt/homebrew/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/tests.dir/_details/console.cpp.o -MF CMakeFiles/tests.dir/_details/console.cpp.o.d -o CMakeFiles/tests.dir/_details/console.cpp.o -c "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/console.cpp"
 
 tests/CMakeFiles/tests.dir/_details/console.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tests.dir/_details/console.cpp.i"
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/console.cpp" > CMakeFiles/tests.dir/_details/console.cpp.i
+	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /opt/homebrew/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/console.cpp" > CMakeFiles/tests.dir/_details/console.cpp.i
 
 tests/CMakeFiles/tests.dir/_details/console.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tests.dir/_details/console.cpp.s"
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/console.cpp" -o CMakeFiles/tests.dir/_details/console.cpp.s
+	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /opt/homebrew/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/console.cpp" -o CMakeFiles/tests.dir/_details/console.cpp.s
 
 tests/CMakeFiles/tests.dir/_details/test.cpp.o: tests/CMakeFiles/tests.dir/flags.make
 tests/CMakeFiles/tests.dir/_details/test.cpp.o: /Users/terka/Documents/Data\ structures/AUS-CMake/tests/_details/test.cpp
 tests/CMakeFiles/tests.dir/_details/test.cpp.o: tests/CMakeFiles/tests.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object tests/CMakeFiles/tests.dir/_details/test.cpp.o"
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/tests.dir/_details/test.cpp.o -MF CMakeFiles/tests.dir/_details/test.cpp.o.d -o CMakeFiles/tests.dir/_details/test.cpp.o -c "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/test.cpp"
+	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /opt/homebrew/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/tests.dir/_details/test.cpp.o -MF CMakeFiles/tests.dir/_details/test.cpp.o.d -o CMakeFiles/tests.dir/_details/test.cpp.o -c "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/test.cpp"
 
 tests/CMakeFiles/tests.dir/_details/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tests.dir/_details/test.cpp.i"
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/test.cpp" > CMakeFiles/tests.dir/_details/test.cpp.i
+	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /opt/homebrew/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/test.cpp" > CMakeFiles/tests.dir/_details/test.cpp.i
 
 tests/CMakeFiles/tests.dir/_details/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tests.dir/_details/test.cpp.s"
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/test.cpp" -o CMakeFiles/tests.dir/_details/test.cpp.s
+	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests" && /opt/homebrew/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/terka/Documents/Data structures/AUS-CMake/tests/_details/test.cpp" -o CMakeFiles/tests.dir/_details/test.cpp.s
 
 # Object files for target tests
 tests_OBJECTS = \

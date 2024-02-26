@@ -109,7 +109,9 @@ namespace ds::utils
     template <class List>
     void ListInsertAnalyzer<List>::executeOperation(List& structure)
     {
-        structure.insert(structure.begin(), getRandomData());
+        //structure.insert(structure.begin(), getRandomData()); //PROBLEM IN THIS CODE RIGHT HERE
+        auto data = this->getRandomData();
+        structure.insert(structure.begin(), data);
     }
 
     //----------

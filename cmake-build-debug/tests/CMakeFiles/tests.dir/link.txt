@@ -1,2 +1,2 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libtests.a CMakeFiles/tests.dir/_details/console_output.cpp.o CMakeFiles/tests.dir/_details/console.cpp.o CMakeFiles/tests.dir/_details/test.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libtests.a
+/usr/bin/ar qc libtests.a CMakeFiles/tests.dir/_details/console_output.cpp.o CMakeFiles/tests.dir/_details/console.cpp.o CMakeFiles/tests.dir/_details/test.cpp.o
+/usr/bin/ranlib libtests.a

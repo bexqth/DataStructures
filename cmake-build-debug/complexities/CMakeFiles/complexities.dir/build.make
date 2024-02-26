@@ -73,15 +73,15 @@ complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.o: complexities
 complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.o: /Users/terka/Documents/Data\ structures/AUS-CMake/complexities/complexity_analyzer.cpp
 complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.o: complexities/CMakeFiles/complexities.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.o"
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/complexities" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.o -MF CMakeFiles/complexities.dir/complexity_analyzer.cpp.o.d -o CMakeFiles/complexities.dir/complexity_analyzer.cpp.o -c "/Users/terka/Documents/Data structures/AUS-CMake/complexities/complexity_analyzer.cpp"
+	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/complexities" && /opt/homebrew/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.o -MF CMakeFiles/complexities.dir/complexity_analyzer.cpp.o.d -o CMakeFiles/complexities.dir/complexity_analyzer.cpp.o -c "/Users/terka/Documents/Data structures/AUS-CMake/complexities/complexity_analyzer.cpp"
 
 complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/complexities.dir/complexity_analyzer.cpp.i"
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/complexities" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/terka/Documents/Data structures/AUS-CMake/complexities/complexity_analyzer.cpp" > CMakeFiles/complexities.dir/complexity_analyzer.cpp.i
+	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/complexities" && /opt/homebrew/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/terka/Documents/Data structures/AUS-CMake/complexities/complexity_analyzer.cpp" > CMakeFiles/complexities.dir/complexity_analyzer.cpp.i
 
 complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/complexities.dir/complexity_analyzer.cpp.s"
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/complexities" && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/terka/Documents/Data structures/AUS-CMake/complexities/complexity_analyzer.cpp" -o CMakeFiles/complexities.dir/complexity_analyzer.cpp.s
+	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/complexities" && /opt/homebrew/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/terka/Documents/Data structures/AUS-CMake/complexities/complexity_analyzer.cpp" -o CMakeFiles/complexities.dir/complexity_analyzer.cpp.s
 
 # Object files for target complexities
 complexities_OBJECTS = \

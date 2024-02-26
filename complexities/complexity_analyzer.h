@@ -203,7 +203,7 @@ namespace ds::utils
     {
         std::vector<size_t> sizesVector;
         for(size_t i = 0; i < getStepCount(); i++) {
-            sizesVector.push_back(i + 1) * getStepSize();
+            sizesVector.push_back( (i + 1 ) * this->getStepSize());
         }
         std::vector<std::vector<duration_t>> durationsMatrix;
         for(size_t replication = 0; replication < getReplicationCount(); replication++) {
@@ -213,7 +213,7 @@ namespace ds::utils
             for(size_t i = 0; i < getStepCount(); i++) { //spusti replikaciu
                 growToSize(structureTest, sizesVector[i]); //abstraktne metody
                 auto timeStart = std::chrono::high_resolution_clock::now();
-                executeOperation(sizesVector); //abtraktne metody - niekto ich v hrierarchii prekryje
+                executeOperation(structureTest); //abtraktne metody - niekto ich v hrierarchii prekryje // ISSUE IN THIS CODE RIGHT HERE
                 auto timeFinish = std::chrono::high_resolution_clock::now();
 
                 duration_t duration = std::chrono::duration_cast<duration_t>(timeFinish - timeStart); //nie moze byt kompatibilny z duration_t (nanosekundy)

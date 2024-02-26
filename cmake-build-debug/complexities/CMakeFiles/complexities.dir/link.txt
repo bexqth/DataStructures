@@ -1,2 +1,2 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libcomplexities.a CMakeFiles/complexities.dir/complexity_analyzer.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libcomplexities.a
+/usr/bin/ar qc libcomplexities.a CMakeFiles/complexities.dir/complexity_analyzer.cpp.o
+/usr/bin/ranlib libcomplexities.a
