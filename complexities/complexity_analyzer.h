@@ -212,9 +212,12 @@ namespace ds::utils
 
             for(size_t i = 0; i < getStepCount(); i++) { //spusti replikaciu
                 growToSize(structureTest, sizesVector[i]); //abstraktne metody
+
+                this->beforeOperation_(structureTest); //v lambde si chceme pripravit data, nemozu byt v lokalnej premennej ale do atributu
                 auto timeStart = std::chrono::high_resolution_clock::now();
                 executeOperation(structureTest); //abtraktne metody - niekto ich v hrierarchii prekryje // ISSUE IN THIS CODE RIGHT HERE
                 auto timeFinish = std::chrono::high_resolution_clock::now();
+                this->afterOperation_(structureTest);
 
                 duration_t duration = std::chrono::duration_cast<duration_t>(timeFinish - timeStart); //nie moze byt kompatibilny z duration_t (nanosekundy)
                 durationsVector.push_back(duration);

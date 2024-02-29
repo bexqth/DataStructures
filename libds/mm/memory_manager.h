@@ -49,7 +49,7 @@ namespace ds::mm {
 	}
 
 	template<typename BlockType>
-    void MemoryManager<BlockType>::releaseAndSetNull(BlockType*& pointer)
+    void MemoryManager<BlockType>::releaseAndSetNull(BlockType*& pointer) //ukazovatel v podobe odkazu
 	{
 		this->releaseMemory(pointer);
 		pointer = nullptr;

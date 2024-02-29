@@ -72,9 +72,13 @@ namespace ds::utils
         rngData_(144),
         rngIndex_(144),
         index_(0),
-        data_(0)
+        data_(0) //v lambde si chceme pripravit data, nemozu byt v lokalnej premennej ale do atributu
     {
-        // TODO 01
+        this->registerBeforeOperation([&](List& list){ //spojime co mi pride ako parameter s tym kde sa aktualne nachadzame
+                data_ = 7777; // neovplyvnuje to cas
+                //data_ = rngData_();
+            }
+        );
     }
 
     template <class List>
@@ -110,7 +114,7 @@ namespace ds::utils
     void ListInsertAnalyzer<List>::executeOperation(List& structure)
     {
         //structure.insert(structure.begin(), getRandomData()); //PROBLEM IN THIS CODE RIGHT HERE
-        auto data = this->getRandomData();
+        auto data = this->getRandomData(); //len tie data ktore sme si pripravili v lamdbe
         structure.insert(structure.begin(), data);
     }
 
@@ -137,7 +141,7 @@ namespace ds::utils
     {
         this->addAnalyzer(std::make_unique<ListInsertAnalyzer<std::vector<int>>>("vector-insert"));
         this->addAnalyzer(std::make_unique<ListInsertAnalyzer<std::list<int>>>("list-insert"));
-        this->addAnalyzer(std::make_unique<ListRemoveAnalyzer<std::vector<int>>>("vector-remove"));
-        this->addAnalyzer(std::make_unique<ListRemoveAnalyzer<std::list<int>>>("list-remove"));
+        //this->addAnalyzer(std::make_unique<ListRemoveAnalyzer<std::vector<int>>>("vector-remove"));
+        //this->addAnalyzer(std::make_unique<ListRemoveAnalyzer<std::list<int>>>("list-remove"));
     }
 }
