@@ -213,7 +213,7 @@ namespace ds::mm {
     size_t CompactMemoryManager<BlockType>::calculateIndex(const BlockType& data)
     {
         if(&data < this->end_ && &data >= this->base_) {
-            return (&data - this->base_)
+            return (&data - this->base_);
         } else {
             throw std::invalid_argument("invalid argument");
         }
