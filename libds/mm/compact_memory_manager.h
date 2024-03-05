@@ -104,7 +104,7 @@ namespace ds::mm {
         BlockType* p = pointer;
         while(p != end_) {
             destroy(p);
-            //delete ptr; //bud delete alebo destoy -> pointer budeme ukazovat na neplatnu adresu (neplatny pointer)
+            //delete ptr; //bud delete alebo destoy -> pointer bude ukazovat na neplatnu adresu (neplatny pointer)
             p++;
         }
         end_ = pointer;
@@ -131,9 +131,7 @@ namespace ds::mm {
     template<typename BlockType>
     size_t CompactMemoryManager<BlockType>::getCapacity() const
     {
-        // TODO 02
-        // po implementacii vymazte vyhodenie vynimky!
-        throw std::runtime_error("Not implemented yet");
+        return this->limit_ - this->base_;
     }
 
     template<typename BlockType>
@@ -170,7 +168,7 @@ namespace ds::mm {
         void* newBase = std::realloc(this->base_, newCapacity * sizeof(BlockType));
 
         if (newBase == nullptr) {
-            throw std::bad_alloc("out of memory");
+            //throw std::bad_alloc();
         }
 
         //this->base_ = newBase;
@@ -199,25 +197,35 @@ namespace ds::mm {
     template<typename BlockType>
     void* CompactMemoryManager<BlockType>::calculateAddress(const BlockType& data)
     {
-        // TODO 02
-        // po implementacii vymazte vyhodenie vynimky!
-        throw std::runtime_error("Not implemented yet");
+        BlockType* p = this->base_;
+        while(p != this->end_ && p != &data) {
+            p++;
+        }
+
+        if(p == this->end_) {
+            return nullptr;
+        } else {
+            return p;
+        }
     }
 
     template<typename BlockType>
     size_t CompactMemoryManager<BlockType>::calculateIndex(const BlockType& data)
     {
-        // TODO 02
-        // po implementacii vymazte vyhodenie vynimky!
-        throw std::runtime_error("Not implemented yet");
+        if(&data < this->end_ && &data >= this->base_) {
+            return (&data - this->base_)
+        } else {
+            throw std::invalid_argument("invalid argument");
+        }
+
     }
 
     template<typename BlockType>
     BlockType& CompactMemoryManager<BlockType>::getBlockAt(size_t index)
     {
-        // TODO 02
-        // po implementacii vymazte vyhodenie vynimky!
-        throw std::runtime_error("Not implemented yet");
+        return *(this->base_ + index); //-> pouzitim * sa uskutocnuje dereferencovanie - pre ziskanie hodnoty na pozicii ich rozdielov
+        // používame operátor dereferencie * na získanie hodnoty, na ktorú ukazuje ukazateľ alebo referencia.
+        //baza + index vráti adresu index-tej pozície v tomto bloku pamäte.
     }
 
     template<typename BlockType>
