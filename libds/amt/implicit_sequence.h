@@ -264,7 +264,8 @@ namespace ds::amt {
     {
         // chcu vratit data
         //return sequence_->access(index); //pointer na blockType
-        return sequence_->access(this->index)->data_; //takto sa dostaneme k datam
+        //return sequence_->access(this->index)->data_; //takto sa dostaneme k datam
+        return sequence_->access(position_)->data_;
     }
 
     template <typename DataType>
