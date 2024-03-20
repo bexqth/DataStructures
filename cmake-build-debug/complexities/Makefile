@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/terka/Documents/Data structures/AUS-CMake"
+CMAKE_SOURCE_DIR = "/Users/terka/Documents/Data structures/DataStructures"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_progress_start "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/CMakeFiles" "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/complexities//CMakeFiles/progress.marks"
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complexities/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/CMakeFiles" 0
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_progress_start "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug/CMakeFiles" "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug/complexities//CMakeFiles/progress.marks"
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complexities/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complexities/clean
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complexities/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complexities/preinstall
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complexities/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complexities/preinstall
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complexities/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 complexities/CMakeFiles/complexities.dir/rule:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complexities/CMakeFiles/complexities.dir/rule
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complexities/CMakeFiles/complexities.dir/rule
 .PHONY : complexities/CMakeFiles/complexities.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ complexities: complexities/CMakeFiles/complexities.dir/rule
 
 # fast build rule for target.
 complexities/fast:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f complexities/CMakeFiles/complexities.dir/build.make complexities/CMakeFiles/complexities.dir/build
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f complexities/CMakeFiles/complexities.dir/build.make complexities/CMakeFiles/complexities.dir/build
 .PHONY : complexities/fast
 
 complexity_analyzer.o: complexity_analyzer.cpp.o
@@ -135,7 +135,7 @@ complexity_analyzer.o: complexity_analyzer.cpp.o
 
 # target to build an object file
 complexity_analyzer.cpp.o:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f complexities/CMakeFiles/complexities.dir/build.make complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.o
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f complexities/CMakeFiles/complexities.dir/build.make complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.o
 .PHONY : complexity_analyzer.cpp.o
 
 complexity_analyzer.i: complexity_analyzer.cpp.i
@@ -143,7 +143,7 @@ complexity_analyzer.i: complexity_analyzer.cpp.i
 
 # target to preprocess a source file
 complexity_analyzer.cpp.i:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f complexities/CMakeFiles/complexities.dir/build.make complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.i
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f complexities/CMakeFiles/complexities.dir/build.make complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.i
 .PHONY : complexity_analyzer.cpp.i
 
 complexity_analyzer.s: complexity_analyzer.cpp.s
@@ -151,7 +151,7 @@ complexity_analyzer.s: complexity_analyzer.cpp.s
 
 # target to generate assembly for a file
 complexity_analyzer.cpp.s:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f complexities/CMakeFiles/complexities.dir/build.make complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.s
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f complexities/CMakeFiles/complexities.dir/build.make complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.s
 .PHONY : complexity_analyzer.cpp.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

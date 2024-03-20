@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/terka/Documents/Data structures/AUS-CMake/complexities/complexity_analyzer.cpp" "complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.o" "gcc" "complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.o.d"
+  "/Users/terka/Documents/Data structures/DataStructures/complexities/complexity_analyzer.cpp" "complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.o" "gcc" "complexities/CMakeFiles/complexities.dir/complexity_analyzer.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

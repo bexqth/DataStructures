@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/terka/Documents/Data structures/AUS-CMake"
+CMAKE_SOURCE_DIR = "/Users/terka/Documents/Data structures/DataStructures"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_progress_start "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/CMakeFiles" "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/tests//CMakeFiles/progress.marks"
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug/CMakeFiles" 0
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_progress_start "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug/CMakeFiles" "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug/tests//CMakeFiles/progress.marks"
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/clean
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/preinstall
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/preinstall
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tests/CMakeFiles/tests.dir/rule:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/tests.dir/rule
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/tests.dir/rule
 .PHONY : tests/CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ tests: tests/CMakeFiles/tests.dir/rule
 
 # fast build rule for target.
 tests/fast:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/build
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/build
 .PHONY : tests/fast
 
 _details/console.o: _details/console.cpp.o
@@ -135,7 +135,7 @@ _details/console.o: _details/console.cpp.o
 
 # target to build an object file
 _details/console.cpp.o:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/console.cpp.o
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/console.cpp.o
 .PHONY : _details/console.cpp.o
 
 _details/console.i: _details/console.cpp.i
@@ -143,7 +143,7 @@ _details/console.i: _details/console.cpp.i
 
 # target to preprocess a source file
 _details/console.cpp.i:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/console.cpp.i
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/console.cpp.i
 .PHONY : _details/console.cpp.i
 
 _details/console.s: _details/console.cpp.s
@@ -151,7 +151,7 @@ _details/console.s: _details/console.cpp.s
 
 # target to generate assembly for a file
 _details/console.cpp.s:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/console.cpp.s
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/console.cpp.s
 .PHONY : _details/console.cpp.s
 
 _details/console_output.o: _details/console_output.cpp.o
@@ -159,7 +159,7 @@ _details/console_output.o: _details/console_output.cpp.o
 
 # target to build an object file
 _details/console_output.cpp.o:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/console_output.cpp.o
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/console_output.cpp.o
 .PHONY : _details/console_output.cpp.o
 
 _details/console_output.i: _details/console_output.cpp.i
@@ -167,7 +167,7 @@ _details/console_output.i: _details/console_output.cpp.i
 
 # target to preprocess a source file
 _details/console_output.cpp.i:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/console_output.cpp.i
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/console_output.cpp.i
 .PHONY : _details/console_output.cpp.i
 
 _details/console_output.s: _details/console_output.cpp.s
@@ -175,7 +175,7 @@ _details/console_output.s: _details/console_output.cpp.s
 
 # target to generate assembly for a file
 _details/console_output.cpp.s:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/console_output.cpp.s
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/console_output.cpp.s
 .PHONY : _details/console_output.cpp.s
 
 _details/test.o: _details/test.cpp.o
@@ -183,7 +183,7 @@ _details/test.o: _details/test.cpp.o
 
 # target to build an object file
 _details/test.cpp.o:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/test.cpp.o
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/test.cpp.o
 .PHONY : _details/test.cpp.o
 
 _details/test.i: _details/test.cpp.i
@@ -191,7 +191,7 @@ _details/test.i: _details/test.cpp.i
 
 # target to preprocess a source file
 _details/test.cpp.i:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/test.cpp.i
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/test.cpp.i
 .PHONY : _details/test.cpp.i
 
 _details/test.s: _details/test.cpp.s
@@ -199,7 +199,7 @@ _details/test.s: _details/test.cpp.s
 
 # target to generate assembly for a file
 _details/test.cpp.s:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/test.cpp.s
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/_details/test.cpp.s
 .PHONY : _details/test.cpp.s
 
 # Help Target
@@ -231,6 +231,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/Users/terka/Documents/Data structures/AUS-CMake/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
