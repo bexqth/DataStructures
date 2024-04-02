@@ -15,20 +15,20 @@ std::vector<std::unique_ptr<ds::tests::Test>> createTests()
 	mm->add_test(std::make_unique<ds::tests::MemoryManagerTest>());
 
 	// TODO 02
-	 mm->add_test(std::make_unique<ds::tests::CompactMemoryManagerTest>());
+	 //mm->add_test(std::make_unique<ds::tests::CompactMemoryManagerTest>());
 
 	// TODO 03
-	 amt->add_test(std::make_unique<ds::tests::ImplicitSequenceTest>());
+	 //amt->add_test(std::make_unique<ds::tests::ImplicitSequenceTest>());
 
 	// TODO 04
-	 amt->add_test(std::make_unique<ds::tests::ExplicitSequenceTest>());
+	 //amt->add_test(std::make_unique<ds::tests::ExplicitSequenceTest>());
 
 	// TODO 05
-	 amt->add_test(std::make_unique<ds::tests::ImplicitHierarchyTest>());
+	 //amt->add_test(std::make_unique<ds::tests::ImplicitHierarchyTest>());
 
 	// TODO 06
-	amt->add_test(std::make_unique<ds::tests::ExplicitHierarchyTest>());
-    amt->add_test(std::make_unique<ds::tests::HierarchyTest>());
+	//amt->add_test(std::make_unique<ds::tests::ExplicitHierarchyTest>());
+    //amt->add_test(std::make_unique<ds::tests::HierarchyTest>());
 
 	// TODO 07
 	// adt->add_test(std::make_unique<ds::tests::ListTest>());

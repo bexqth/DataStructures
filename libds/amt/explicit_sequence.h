@@ -239,15 +239,12 @@ namespace ds::amt {
     template<typename BlockType>
     size_t ExplicitSequence<BlockType>::calculateIndex(BlockType& data)
     {
-        size_t index = 0;
-        BlockType* block = findBlockWithProperty( //berie si predikat mi to napiseme ako lambda vyraz
-             [&](BlockType* b){
-                 ++index;
-                 return b == &data;
-             }
-        );
-
-        return block != nullptr ? index - 1 : INVALID_INDEX;
+        size_t result = 0;
+        BlockType* block = this->findBlockWithProperty([&](BlockType* b){
+           result++;
+           return &data == b;
+        });
+        return block != nullptr ? result - 1 : INVALID_INDEX;
     }
 
     template<typename BlockType>

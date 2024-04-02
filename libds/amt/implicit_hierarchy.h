@@ -130,7 +130,7 @@ namespace ds::amt {
 	template<typename DataType, size_t K>
     MemoryBlock<DataType>* ImplicitHierarchy<DataType, K>::accessSon(const MemoryBlock<DataType>& node, size_t sonOrder) const
 	{
-		int index = accessSon(node, sonOrder);
+		int index = indexOfSon(node, sonOrder);
         if(index < this->size()) {
             return &this->getMemoryManager()->getBlockAt(index);
         }

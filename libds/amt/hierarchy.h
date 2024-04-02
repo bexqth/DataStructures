@@ -196,7 +196,7 @@ namespace ds::amt {
         BlockType* parent = accessParent(node);
         while(parent != nullptr) {
             ++result;
-            parent = accessParent(parent);
+            parent = accessParent(*parent);
         }
         return result;
 	}
@@ -226,7 +226,7 @@ namespace ds::amt {
 	template<typename BlockType>
     bool Hierarchy<BlockType>::isRoot(const BlockType& node) const
 	{
-		return accessRoot(node) == nullptr;
+		return this->accessParent(node) == nullptr;
 	}
 
 	template<typename BlockType>

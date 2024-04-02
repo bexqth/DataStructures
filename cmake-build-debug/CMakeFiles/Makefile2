@@ -199,8 +199,8 @@ tests/CMakeFiles/tests.dir/clean:
 # Target rules for target cli/CMakeFiles/main.dir
 
 # All Build rule for target.
-cli/CMakeFiles/main.dir/all: tests/CMakeFiles/tests.dir/all
 cli/CMakeFiles/main.dir/all: complexities/CMakeFiles/complexities.dir/all
+cli/CMakeFiles/main.dir/all: tests/CMakeFiles/tests.dir/all
 	$(MAKE) $(MAKESILENT) -f cli/CMakeFiles/main.dir/build.make cli/CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f cli/CMakeFiles/main.dir/build.make cli/CMakeFiles/main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/terka/Documents/Data structures/DataStructures/cmake-build-debug/CMakeFiles" --progress-num=3,4 "Built target main"
