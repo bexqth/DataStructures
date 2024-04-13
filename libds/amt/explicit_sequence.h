@@ -200,15 +200,15 @@ namespace ds::amt {
         last_ = first_;
         while(first_ != nullptr) {
             first_ = this->accessNext(*first_);
-            //this->getMemoryManager().releaseMemory(last_);
-            this->memoryManager_->releaseMemory(last_);
+            AMS<BlockType>::memoryManager_->releaseMemory(last_);
             last_ = first_;
         }
     }
 
     template<typename BlockType>
     bool ExplicitSequence<BlockType>::equals(const AMT& other)
-    {   // const lebo mi prisiel ako const a inak to nejde
+    {
+        // const lebo mi prisiel ako const a inak to nejde
         const ES<BlockType>* otherES = dynamic_cast<const ES<BlockType>*>(&other); //other je typu referencia treba dat & pred other
         if(otherES == nullptr) {
             return false; //poradilo sa to pretypovat uz je to v premennej otherES
@@ -263,10 +263,10 @@ namespace ds::amt {
     BlockType* ExplicitSequence<BlockType>::access(size_t index) const
     {
         BlockType* result = nullptr;
-        if(index >= 0 && index < this->size()) {
+        if(index < this->size()) {
             result = this->first_;
-            for(int i = 0; i < index - 1; ++i) {
-                result = static_cast<BlockType*>(result->next_);
+            for(size_t i = 0; i < index; ++i) {
+                result = this->accessNext(*result);
             }
         }
         return result;
@@ -473,7 +473,7 @@ namespace ds::amt {
     template <typename BlockType>
     bool ExplicitSequence<BlockType>::ExplicitSequenceIterator::operator!=(const ExplicitSequenceIterator& other) const
     {
-        return !(*this == other);
+        return position_ != other.position_;
     }
 
     template <typename BlockType>
@@ -542,7 +542,7 @@ namespace ds::amt {
 
         if (next != nullptr)
         {
-            next->previous_ = const_cast<BlockType*>(previous);
+            next->previous_ = previous;
         }
     }
 
