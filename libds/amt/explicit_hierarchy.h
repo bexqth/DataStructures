@@ -426,47 +426,57 @@ namespace ds::amt {
     template <typename DataType, size_t K>
     KWayExplicitHierarchy<DataType, K>::~KWayExplicitHierarchy()
     {
-		// TODO 07
+        this->clear();
     }
 
     template<typename DataType, size_t K>
     size_t KWayExplicitHierarchy<DataType, K>::degree(const BlockType& node) const
 	{
-		// TODO 07
-		// po implementacii vymazte vyhodenie vynimky!
-		throw std::runtime_error("Not implemented yet");
+        size_t result = 0;
+        for (BlockType* b : *node.sons_) {
+            if (b != nullptr){
+                result++;
+            }
+        }
+        return result;
 	}
 
 	template<typename DataType, size_t K>
 	auto KWayExplicitHierarchy<DataType, K>::accessSon(const BlockType& node, size_t sonOrder) const -> BlockType*
 	{
-		// TODO 07
-		// po implementacii vymazte vyhodenie vynimky!
-		throw std::runtime_error("Not implemented yet");
+        MemoryBlock<BlockType*>* sonBlock = node.sons_->access(sonOrder);
+        return sonBlock != nullptr ? sonBlock->data_ : nullptr;
 	}
 
 	template<typename DataType, size_t K>
     auto KWayExplicitHierarchy<DataType, K>::emplaceSon(BlockType& parent, size_t sonOrder) -> BlockType&
 	{
-		// TODO 07
-		// po implementacii vymazte vyhodenie vynimky!
-		throw std::runtime_error("Not implemented yet");
+        BlockType* newSon = AbstractMemoryStructure<BlockType>::memoryManager_->allocateMemory();
+        parent.sons_->access(sonOrder)->data_ = newSon;
+        newSon->parent_ = &parent;
+        return *newSon;
 	}
 
 	template<typename DataType, size_t K>
     void KWayExplicitHierarchy<DataType, K>::changeSon(BlockType& parent, size_t sonOrder, BlockType* newSon)
 	{
-		// TODO 07
-		// po implementacii vymazte vyhodenie vynimky!
-		throw std::runtime_error("Not implemented yet");
+        MemoryBlock<BlockType*>* sonBlock = parent.sons_->access(sonOrder);
+        BlockType* oldSon = sonBlock->data_;
+        sonBlock->data_ = newSon;
+        if (oldSon != nullptr) { oldSon->parent_ = nullptr; }
+        if (newSon != nullptr) { newSon->parent_ = &parent; }
 	}
 
 	template<typename DataType, size_t K>
     void KWayExplicitHierarchy<DataType, K>::removeSon(BlockType& parent, size_t sonOrder)
 	{
-		// TODO 07
-		// po implementacii vymazte vyhodenie vynimky!
-		throw std::runtime_error("Not implemented yet");
+        MemoryBlock<BlockType*>* sonBlock = parent.sons_->access(sonOrder);
+        BlockType* removedSon = sonBlock->data_;
+        Hierarchy<BlockType>::processPostOrder(removedSon, [&](BlockType* b)
+        {
+            AbstractMemoryStructure<BlockType>::memoryManager_->releaseMemory(b);
+        });
+        sonBlock->data_ = nullptr;
 	}
 
 	template<typename DataType>
@@ -485,7 +495,7 @@ namespace ds::amt {
     template <typename DataType>
     BinaryExplicitHierarchy<DataType>::~BinaryExplicitHierarchy()
     {
-		// TODO 07
+        this->clear();
     }
 
     template<typename DataType>
