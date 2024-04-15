@@ -7,8 +7,8 @@ namespace ds::amt {
 
     template<typename BlockType>
     class ExplicitSequence :
-        public Sequence<BlockType>,
-        public ExplicitAMS<BlockType>
+            public Sequence<BlockType>,
+            public ExplicitAMS<BlockType>
     {
     public:
         ExplicitSequence();
@@ -77,7 +77,7 @@ namespace ds::amt {
 
     template<typename DataType>
     struct SinglyLinkedSequenceBlock :
-        public MemoryBlock<DataType>
+            public MemoryBlock<DataType>
     {
 
         SinglyLinkedSequenceBlock() : next_(nullptr) {}
@@ -90,7 +90,7 @@ namespace ds::amt {
 
     template<typename DataType>
     class SinglyLinkedSequence :
-        public ES<SLSBlock<DataType>>
+            public ES<SLSBlock<DataType>>
     {
     public:
         using BlockType = SinglyLinkedSequenceBlock<DataType>;
@@ -101,7 +101,7 @@ namespace ds::amt {
 
     template<typename DataType>
     class SinglyCyclicLinkedSequence :
-        public SinglyLS<DataType>
+            public SinglyLS<DataType>
     {
     };
 
@@ -112,7 +112,7 @@ namespace ds::amt {
 
     template<typename DataType>
     struct DoublyLinkedSequenceBlock :
-        public SLSBlock<DataType>
+            public SLSBlock<DataType>
     {
 
         DoublyLinkedSequenceBlock() : previous_(nullptr) {}
@@ -126,13 +126,13 @@ namespace ds::amt {
 
     template<typename DataType>
     class DoublyLinkedSequence :
-        public ES<DLSBlock<DataType>>
+            public ES<DLSBlock<DataType>>
     {
     public:
         using BlockType = DLSBlock<DataType>;
 
         BlockType* access(size_t index) const override;
-    	BlockType* accessPrevious(const BlockType& block) const override;
+        BlockType* accessPrevious(const BlockType& block) const override;
 
         void removeFirst() override;
 
@@ -148,7 +148,7 @@ namespace ds::amt {
 
     template<typename DataType>
     class DoublyCyclicLinkedSequence :
-        public DoublyLS<DataType>
+            public DoublyLS<DataType>
     {
     };
 
@@ -159,14 +159,14 @@ namespace ds::amt {
 
     template<typename BlockType>
     ExplicitSequence<BlockType>::ExplicitSequence() :
-        first_(nullptr),
-        last_(nullptr)
+            first_(nullptr),
+            last_(nullptr)
     {
     }
 
     template<typename BlockType>
     ExplicitSequence<BlockType>::ExplicitSequence(const ExplicitSequence& other) :
-        ExplicitSequence()
+            ExplicitSequence()
     {
         this->assign(other);
     }
@@ -183,12 +183,12 @@ namespace ds::amt {
         if (this != &other)
         {
             this->clear();
-            //pretypovanie na referenciach ak to spadne dostaneme vynimku
+
             const ExplicitSequence<BlockType>& otherExplicitSequence = dynamic_cast<const ExplicitSequence<BlockType>&>(other);
             otherExplicitSequence.processAllBlocksForward([&](const BlockType* b)
-            {
-                this->insertLast().data_ = b->data_;
-            });
+                                                          {
+                                                              this->insertLast().data_ = b->data_;
+                                                          });
         }
 
         return *this;
@@ -198,7 +198,9 @@ namespace ds::amt {
     void ExplicitSequence<BlockType>::clear()
     {
         last_ = first_;
-        while(first_ != nullptr) {
+
+        while (first_ != nullptr)
+        {
             first_ = this->accessNext(*first_);
             AMS<BlockType>::memoryManager_->releaseMemory(last_);
             last_ = first_;
@@ -208,31 +210,38 @@ namespace ds::amt {
     template<typename BlockType>
     bool ExplicitSequence<BlockType>::equals(const AMT& other)
     {
-        // const lebo mi prisiel ako const a inak to nejde
-        const ES<BlockType>* otherES = dynamic_cast<const ES<BlockType>*>(&other); //other je typu referencia treba dat & pred other
-        if(otherES == nullptr) {
-            return false; //poradilo sa to pretypovat uz je to v premennej otherES
-        }
-
-        if(this == otherES) {
+        if (this == &other)
+        {
             return true;
         }
 
-        if(this->size() != otherES->size()) {
+        if (this->size() != other.size())
+        {
             return false;
         }
 
-        BlockType* myCurrent = this->first_;
-        BlockType* otherCurrent = otherES->first_;
+        const ExplicitSequence<BlockType>* otherExplicitSequence = dynamic_cast<const ExplicitSequence<BlockType>*>(&other);
+        if (otherExplicitSequence == nullptr)
+        {
+            return false;
+        }
 
-        while(myCurrent != nullptr) {
-            if(!(myCurrent->data_ == otherCurrent->data_)) {
+        BlockType* myCurrent = first_;
+        BlockType* otherCurrent = otherExplicitSequence->first_;
+
+        while (myCurrent != nullptr)
+        {
+            if (!(myCurrent->data_ == otherCurrent->data_))
+            {
                 return false;
-            } else {
+            }
+            else
+            {
                 myCurrent = this->accessNext(*myCurrent);
-                otherCurrent = otherES->accessNext(*otherCurrent);
+                otherCurrent = otherExplicitSequence->accessNext(*otherCurrent);
             }
         }
+
         return true;
     }
 
@@ -240,10 +249,11 @@ namespace ds::amt {
     size_t ExplicitSequence<BlockType>::calculateIndex(BlockType& data)
     {
         size_t result = 0;
-        BlockType* block = this->findBlockWithProperty([&](BlockType* b){
-           result++;
-           return &data == b;
-        });
+        BlockType* block = this->findBlockWithProperty([&](BlockType* b)
+                                                       {
+                                                           result++;
+                                                           return &data == b;
+                                                       });
         return block != nullptr ? result - 1 : INVALID_INDEX;
     }
 
@@ -263,12 +273,16 @@ namespace ds::amt {
     BlockType* ExplicitSequence<BlockType>::access(size_t index) const
     {
         BlockType* result = nullptr;
-        if(index < this->size()) {
-            result = this->first_;
-            for(size_t i = 0; i < index; ++i) {
+
+        if (index < this->size())
+        {
+            result = first_;
+            for (size_t i = 0; i < index; i++)
+            {
                 result = this->accessNext(*result);
             }
         }
+
         return result;
     }
 
@@ -280,21 +294,23 @@ namespace ds::amt {
 
     template<typename BlockType>
     BlockType* ExplicitSequence<BlockType>::accessPrevious(const BlockType& block) const
-    {   //musi to prejst lebo to nemusi byt obostranne zretazena sekvencia
+    {
         return this->findBlockWithProperty([&](BlockType* b)
-            {
-                return b->next_ == &block;
-            });
+                                           {
+                                               return b->next_ == &block;
+                                           });
     }
 
     template<typename BlockType>
     BlockType& ExplicitSequence<BlockType>::insertFirst()
     {
-        if (this->size() == 0) {
+        if (this->size() == 0)
+        {
             first_ = last_ = AMS<BlockType>::memoryManager_->allocateMemory();
             return *first_;
         }
-        else {
+        else
+        {
             return this->insertBefore(*first_);
         }
     }
@@ -302,11 +318,13 @@ namespace ds::amt {
     template<typename BlockType>
     BlockType& ExplicitSequence<BlockType>::insertLast()
     {
-        if (this->size() == 0) {
+        if (this->size() == 0)
+        {
             first_ = last_ = AMS<BlockType>::memoryManager_->allocateMemory();
             return *last_;
         }
-        else {
+        else
+        {
             return this->insertAfter(*last_);
         }
     }
@@ -315,10 +333,10 @@ namespace ds::amt {
     BlockType& ExplicitSequence<BlockType>::insert(size_t index)
     {
         return index == 0
-            ? this->insertFirst()
-            : index == this->size()
-                ? this->insertLast()
-                : this->insertAfter(*this->access(index - 1));
+               ? this->insertFirst()
+               : index == this->size()
+                 ? this->insertLast()
+                 : this->insertAfter(*this->access(index - 1));
     }
 
     template<typename BlockType>
@@ -330,7 +348,8 @@ namespace ds::amt {
         this->connectBlocks(&block, newBlock);
         this->connectBlocks(newBlock, nextBlock);
 
-        if (last_ == &block) {
+        if (last_ == &block)
+        {
             last_ = newBlock;
         }
         return *newBlock;
@@ -345,7 +364,8 @@ namespace ds::amt {
         this->connectBlocks(prevBlock, newBlock);
         this->connectBlocks(newBlock, &block);
 
-        if (first_ == &block) {
+        if (first_ == &block)
+        {
             first_ = newBlock;
         }
         return *newBlock;
@@ -354,11 +374,13 @@ namespace ds::amt {
     template<typename BlockType>
     void ExplicitSequence<BlockType>::removeFirst()
     {
-        if (first_ == last_){
+        if (first_ == last_)
+        {
             AMS<BlockType>::memoryManager_->releaseMemory(first_);
             first_ = last_ = nullptr;
         }
-        else {
+        else
+        {
             BlockType* newFirst = this->accessNext(*first_);
             AMS<BlockType>::memoryManager_->releaseMemory(first_);
             first_ = newFirst;
@@ -368,11 +390,13 @@ namespace ds::amt {
     template<typename BlockType>
     void ExplicitSequence<BlockType>::removeLast()
     {
-        if (first_ == last_) {
+        if (first_ == last_)
+        {
             AMS<BlockType>::memoryManager_->releaseMemory(last_);
             first_ = last_ = nullptr;
         }
-        else {
+        else
+        {
             BlockType* newLast = this->accessPrevious(*last_);
             AMS<BlockType>::memoryManager_->releaseMemory(last_);
             last_ = newLast;
@@ -397,10 +421,12 @@ namespace ds::amt {
     void ExplicitSequence<BlockType>::removeNext(const BlockType& block)
     {
         BlockType* deletedBlock = this->accessNext(block);
-        if (deletedBlock == last_) {
+        if (deletedBlock == last_)
+        {
             this->removeLast();
         }
-        else {
+        else
+        {
             this->disconnectBlock(deletedBlock);
             AMS<BlockType>::memoryManager_->releaseMemory(deletedBlock);
         }
@@ -410,10 +436,12 @@ namespace ds::amt {
     void ExplicitSequence<BlockType>::removePrevious(const BlockType& block)
     {
         BlockType* deletedBlock = this->accessPrevious(block);
-        if (deletedBlock == first_) {
+        if (deletedBlock == first_)
+        {
             this->removeFirst();
         }
-        else {
+        else
+        {
             this->disconnectBlock(deletedBlock);
             AMS<BlockType>::memoryManager_->releaseMemory(deletedBlock);
         }
@@ -437,15 +465,15 @@ namespace ds::amt {
 
     template <typename BlockType>
     ExplicitSequence<BlockType>::ExplicitSequenceIterator::ExplicitSequenceIterator(BlockType* position) :
-        position_(position)
+            position_(position)
     {
     }
 
     template <typename BlockType>
     ExplicitSequence<BlockType>::ExplicitSequenceIterator::ExplicitSequenceIterator(
-        const ExplicitSequenceIterator& other
+            const ExplicitSequenceIterator& other
     ) :
-        position_(other.position_)
+            position_(other.position_)
     {
     }
 
@@ -460,7 +488,7 @@ namespace ds::amt {
     typename ExplicitSequence<BlockType>::ExplicitSequenceIterator ExplicitSequence<BlockType>::ExplicitSequenceIterator::operator++(int)
     {
         ExplicitSequenceIterator tmp(*this);
-    	this->operator++();
+        this->operator++();
         return tmp;
     }
 
@@ -499,22 +527,28 @@ namespace ds::amt {
     {
         BlockType* result = nullptr;
 
-        if (index < this->size()) {
-            if (index < this->size() / 2) {
+        if (index < this->size())
+        {
+            if (index < this->size() / 2)
+            {
                 result = this->first_;
 
-                for (size_t i = 0; i < index; i++) {
+                for (size_t i = 0; i < index; i++)
+                {
                     result = this->accessNext(*result);
                 }
             }
-            else{
+            else
+            {
                 result = this->last_;
 
-                for (size_t i = 0; i < this->size() - index - 1; i++) {
+                for (size_t i = 0; i < this->size() - index - 1; i++)
+                {
                     result = this->accessPrevious(*result);
                 }
             }
         }
+
         return result;
     }
 
