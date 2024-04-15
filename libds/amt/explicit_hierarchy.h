@@ -362,7 +362,7 @@ namespace ds::amt {
     template<typename DataType>
     size_t MultiWayExplicitHierarchy<DataType>::degree(const BlockType& node) const
 	{
-		return node.sons_->size();
+		return node.sons_->size(); //crashes
 	}
 
 	template<typename DataType>

@@ -215,9 +215,7 @@ namespace ds::mm {
     template<typename BlockType>
     bool CompactMemoryManager<BlockType>::equals(const CompactMemoryManager<BlockType>& other) const
     {
-        return this == &other ||
-               this->getAllocatedBlockCount() == other.getAllocatedBlockCount() &&
-               std::memcmp(base_, other.base_, this->getAllocatedBlocksSize()) == 0;
+        return this == &other || this->getAllocatedBlockCount() == other.getAllocatedBlockCount() && std::memcmp(base_, other.base_, this->getAllocatedBlocksSize()) == 0;
     }
 
     template<typename BlockType>
