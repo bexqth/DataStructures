@@ -371,6 +371,7 @@ namespace ds::amt {
         return sonBlock != nullptr ? sonBlock->data_ : nullptr;
     }
 
+
     template<typename DataType>
     auto MultiWayExplicitHierarchy<DataType>::emplaceSon(BlockType& parent, size_t sonOrder) -> BlockType&
     {
